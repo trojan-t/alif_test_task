@@ -12,7 +12,7 @@ func EgyptianFraction(top, bottom float64) string {
 		x := math.Ceil(bottom / top)
 		bottomList = append(bottomList, x)
 		top = x*top - bottom
-		bottom = bottom * x
+		bottom *= x
 	}
 	var sb strings.Builder
 	for _, currentBottom := range bottomList {

@@ -1,10 +1,10 @@
 package pkg
 
-func FixedPoint(list []int) interface{} {
+func FixedPoint(list []int) (int, bool) {
 	for index, item := range list {
 		if index == item {
-			return index
+			return index, true
 		}
 	}
-	return false
+	return -1, false
 }
